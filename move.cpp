@@ -8,10 +8,12 @@ struct Foo
 {
       // Constructor
    Foo(int in_x = 0)
-         : x(in_x) {}
+         : x(in_x)
+   { cout << "Foo::Foo(int)" << endl; }
    
       // Destructor
-   ~Foo() { cout << "Foo::~Foo()" << endl; }
+   ~Foo()
+   { cout << "Foo::~Foo()" << endl; }
    
       // Copy Constructor
    Foo(const Foo& rhs)

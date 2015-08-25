@@ -21,6 +21,6 @@ int main(int argc, char *argv[])
    auto foo = audibleAccess(aVector, 3);
    
    cout << "foo is a " << typeid(foo).name() << " and is " << foo << endl;
-   
+   cout << "typeid(decltype(foo)) = " << typeid(decltype(foo)).name() << endl;
    return 0;
 }
