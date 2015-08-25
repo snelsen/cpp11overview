@@ -6,44 +6,44 @@ using namespace std;
 
 struct Foo
 {
-	// Constructor
-	Foo(int in_x = 0)
-		: x(in_x) {}
-	
-	// Destructor
-	~Foo() { cout << "Foo::~Foo()" << endl; }
-	
-	// Copy Constructor
-	Foo(const Foo& rhs)
-	: x(rhs.x)
-	{ cout << "Foo::Foo(Foo&)" << endl; }
-
-	// Copy Assignment Operator
-	Foo& operator=(const Foo& rhs)
-	{
-		cout << "Foo::operator=(Foo&)" << endl;
-		if(this == &rhs)
-			return *this;
-		x = rhs.x;
-		return *this;
-	}
-	
-	// Move Constructor
-	Foo(Foo&& rhs)
-	: x(move(rhs.x))
-	{ cout << "Foo::Foo(Foo&&)" << endl; }
-	
-	// Move Assignment Operator
-	Foo& operator=(Foo&& rhs)
-	{
-		cout << "Foo::operator=(Foo&&)" << endl;
-		if(this == &rhs)
-			return *this;
-		swap(x, rhs.x);
-		return *this;
-	}
-	
-	int x;
+      // Constructor
+   Foo(int in_x = 0)
+         : x(in_x) {}
+   
+      // Destructor
+   ~Foo() { cout << "Foo::~Foo()" << endl; }
+   
+      // Copy Constructor
+   Foo(const Foo& rhs)
+         : x(rhs.x)
+   { cout << "Foo::Foo(Foo&)" << endl; }
+   
+      // Copy Assignment Operator
+   Foo& operator=(const Foo& rhs)
+   {
+      cout << "Foo::operator=(Foo&)" << endl;
+      if(this == &rhs)
+         return *this;
+      x = rhs.x;
+      return *this;
+   }
+   
+      // Move Constructor
+   Foo(Foo&& rhs)
+         : x(move(rhs.x))
+   { cout << "Foo::Foo(Foo&&)" << endl; }
+   
+      // Move Assignment Operator
+   Foo& operator=(Foo&& rhs)
+   {
+      cout << "Foo::operator=(Foo&&)" << endl;
+      if(this == &rhs)
+         return *this;
+      swap(x, rhs.x);
+      return *this;
+   }
+   
+   int x;
 };
 
 int main(int argc, char *argv[])
