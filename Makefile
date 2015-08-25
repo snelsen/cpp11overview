@@ -3,7 +3,7 @@
 #CXXFLAGS+=-std=c++0x
 CXXFLAGS+=-std=c++11 -O2 -Wall
 
-binaries=decltype move
+binaries=decltype move lambda
 
 all : auto $(binaries)
 
