@@ -2,7 +2,7 @@
 
 CXXFLAGS+=-std=c++0x
 
-all : auto decltype
+all : auto decltype move
 
 % : %.cpp
 	$(CXX) $(CFLAGS) $(CXXFLAGS) $< -o $@
