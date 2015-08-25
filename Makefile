@@ -1,9 +1,15 @@
 # Makefile
 
 #CXXFLAGS+=-std=c++0x
-CXXFLAGS+=-std=c++11
+CXXFLAGS+=-std=c++11 -O2 -Wall
 
-all : auto decltype move
+binaries=decltype move
+
+all : auto $(binaries)
 
 % : %.cpp
 	$(CXX) $(CFLAGS) $(CXXFLAGS) $< -o $@
+
+clean :
+	$(RM) $(binaries) *.o
+
